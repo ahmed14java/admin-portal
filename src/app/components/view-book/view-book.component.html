@@ -1,0 +1,92 @@
+<div class="container">
+  <div style="margin-top: 30px; margin-bottom: 20px;" class="left">
+    <a routerLink="/book-list">
+      <i class="fa fa-long-arrow-left"></i> Go Back</a>
+    <a (click)="onSelect(book)" style="cursor:pointer; margin-left: 20px;">Edit</a>
+  </div>
+
+  <mat-grid-list cols="9" rowHeight="100px">
+    
+    <mat-grid-tile [colspan]="3" [rowspan]="5" class="left" >
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <img [src]="'http://localhost:8080/image/book/'+book.id+'.png'" class="responsive-img" />
+        </div>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="6">
+      <h3>{{book.title}}</h3>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="3" [rowspan]="3" class="left">
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <p>
+            <strong>Author:</strong> {{book.author}} </p>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <p>
+            <strong>Publisher:</strong> {{book.publisher}} </p>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <p>
+            <strong>Publication Date:</strong> {{book.publicationDate}} </p>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <p>
+            <strong>Language:</strong> {{book.language}} </p>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <p>
+            <strong>Category:</strong> {{book.category}} </p>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <p>
+            <strong>Pages:</strong> {{book.numberOfPages}} </p>
+        </mat-list-item>
+        
+      </mat-list>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="3" >
+        <mat-list role="list" class="mat">
+            
+                      <mat-list-item role="listitem">
+                          <p>
+                            <strong>Format:</strong> {{book.format}} </p>
+                        </mat-list-item>
+            
+                      <mat-list-item role="listitem">
+                        <p>
+                          <strong>ISBN:</strong> {{book.isbn}} </p>
+                      </mat-list-item>
+                      <mat-list-item role="listitem">
+                        <p>
+                          <strong>Shipping Weight:</strong> {{book.shippingWeight}} </p>
+                      </mat-list-item>
+                      <mat-list-item role="listitem">
+                        <p>
+                          <strong>List Price:</strong> {{book.listPrice}} </p>
+                      </mat-list-item>
+                      <mat-list-item role="listitem">
+                        <p>
+                          <strong>Our Price: </strong> {{book.ourPrice}} </p>
+                      </mat-list-item>
+                      <mat-list-item role="listitem">
+                        <p>
+                          <strong>Number In Stock:</strong> {{book.inStockNumber}} </p>
+                      </mat-list-item>
+                    </mat-list>
+    </mat-grid-tile>
+
+
+    <mat-grid-tile [colspan]="6">
+        <p>
+            <strong>Description:</strong> {{book.discription}} </p>
+    </mat-grid-tile>
+
+
+  </mat-grid-list>
+
+
+</div>

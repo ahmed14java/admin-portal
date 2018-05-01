@@ -1,0 +1,10 @@
+
+<h1 mat-dialog-title>Confirm Deleting</h1>
+<mat-dialog-content>
+    Are you sure you want to delete?
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="dialogRef.close('yes')">Yes</button>
+    <button mat-raised-button (click)="dialogRef.close('no')">No</button>
+</mat-dialog-actions>

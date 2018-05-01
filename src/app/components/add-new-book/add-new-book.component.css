@@ -1,0 +1,10 @@
+.full-width{
+    width: 100%;
+}
+.time{
+    width: 50%;
+}
+
+mat-grid-list{
+    margin: 0 120px 0 120px;
+}
